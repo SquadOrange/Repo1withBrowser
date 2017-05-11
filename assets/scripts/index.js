@@ -7,7 +7,11 @@ $(() => {
   setAPIOrigin(location, config)
 
   $('.change-dog').on('click', function () {
-    $('.awesome-dog').attr('src', 'http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg')
+    if ($('.awesome-dog').attr('src', 'http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg')) {
+      $('.awesome-dog').attr('src', 'http://res.cloudinary.com/dfu4pwocw/image/upload/v1489196617/IMG_0512_ovxd26.jpg')
+    } else if ($('.awesome-dog').attr('src', 'http://res.cloudinary.com/dfu4pwocw/image/upload/v1489196617/IMG_0512_ovxd26.jpg')) {
+      $('.awesome-dog').attr('src', 'http://ghk.h-cdn.co/assets/16/09/980x490/landscape-1457107485-gettyimages-512366437.jpg')
+    }
   })
 })
 
